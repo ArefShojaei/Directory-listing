@@ -22,8 +22,7 @@ $items = [];
 
 $entries = scandir($directory);
 
-# Remove "." & ".." from the Array
-array_shift($entries);
+# Remove "." from the Array
 array_shift($entries);
 
 
