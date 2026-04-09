@@ -3,10 +3,13 @@
 ### How to use that ?
 
 > 1: Check to have version "^8.0" of PHP!
+```bash
+php --version
+```
 
 > 2: Use this pattern in CLI to run server
 
-```txt
+```bash
 php -S [host]:[port] index.php
 ```
 
@@ -16,3 +19,25 @@ http://[host]:[port]
 ```
 
 Finally, You can upload files in "public/" folder
+
+### Important Note
+If you want to provide a **file downloader** or **file reader** for this project, You should follow these ways:
+
+
+* helpers.php
+
+> Download file
+```php
+download_file(string $file);
+```
+> Read file
+```php
+read_file(string $file);
+```
+
+* process.php
+
+> At line 15
+```php
+if (is_file($directory)) [download or read]_file($file);
+```
