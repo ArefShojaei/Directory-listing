@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Directory Index • <?= htmlspecialchars($request["path"]) ?></title>
+  <title>Directory Index " <?= htmlspecialchars($request["path"]) ?></title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -115,7 +115,7 @@
 
     <div class="mt-5 text-sm muted-text flex gap-6 flex-wrap">
       <div><?= count($entries) ?> entries</div>
-      <div><?= count(array_filter($items, fn($item) => $item["is_dir"])); ?> directories • <?= count(array_filter($items, fn($item) => !$item["is_dir"])); ?> files</div>
+      <div><?= count(array_filter($items, fn($item) => $item["is_dir"])); ?> directories " <?= count(array_filter($items, fn($item) => !$item["is_dir"])); ?> files</div>
       <div>Last indexed: <?= end($items)["mtime"]; ?></div>
     </div>
   </header>

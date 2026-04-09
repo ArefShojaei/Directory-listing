@@ -14,7 +14,7 @@
       <tbody>
         <?php foreach($items as $item): ?>
           <tr class="border-t border-cyan-500/5 row-hover">
-            <td class="px-8 py-5 font-medium"><a href='http://<?= $_SERVER["HTTP_HOST"] . $item["url"] ?>' class="accent-text hover:underline"><?= htmlspecialchars($item["entry"]) ?></a></td>
+            <td class="px-8 py-5 font-medium"><a href="http://<?= $_SERVER['HTTP_HOST'] . $item['url'] ?>" class="accent-text hover:underline"><?= htmlspecialchars($item["entry"]) ?></a></td>
             <td class="px-8 py-5 muted-text"><?= isset($item["size"]) ? $item["size"] : "NAN" ?></td>
             <td class="px-8 py-5 muted-text"><?= $item["mtime"] ?></td>
           </tr>
@@ -26,7 +26,7 @@
   <!-- Grid View -->
   <div class="grid-view hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-2">
       <?php foreach($items as $item): ?>
-          <a href='http://<?= $_SERVER["HTTP_HOST"] . $item["url"] ?>' class="glass p-7 rounded-2xl card-hover transition-all duration-300 flex flex-col gap-4 border border-cyan-500/10 hover:border-cyan-400/40">
+          <a href="http://<?= $_SERVER["HTTP_HOST"] . $item["url"] ?>" class="glass p-7 rounded-2xl card-hover transition-all duration-300 flex flex-col gap-4 border border-cyan-500/10 hover:border-cyan-400/40">
             <div class="text-5xl opacity-80"><?= ($item["is_dir"] ? "📁" : "📄") ?></div>
             <div class="font-semibold text-xl truncate"><?= htmlspecialchars($item["entry"]) ?></div>
             <div class="text-sm muted-text"><?= isset($item["size"]) ? $item["size"] . " • " : null ?> <?= $item["mtime"] ?></div>
