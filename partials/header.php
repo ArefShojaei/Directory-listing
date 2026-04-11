@@ -8,8 +8,7 @@
   <title>Directory Index " <?= htmlspecialchars($request["path"]) ?></title>
 
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script src="/tailwind/4.2.2/tailwind.js"></script>
   <style>
     [data-theme="dark"] {
       --bg:       #0a0f1a;
